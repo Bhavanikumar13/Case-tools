@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor "customer" as ac1
+usecase "get confirmation" as uc1
+rectangle {
+usecase "give shipping info" as uc2
+usecase "give payment info" as uc3
+}
+usecase "Browser catalog and selete items" as uc4
+uc1--uc2
+uc1--uc3
+uc2 ..> uc4:<include>
+uc3 ..> uc4:<include>
+uc4--ac1
+@enduml
