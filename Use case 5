@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+actor "ware house manager" as ac1
+rectangle {
+usecase "add new items to inventory" as uc1
+usecase " check hagged products" as uc2
+}
+usecase " Delete expired or unnecessary items from inventory" as uc3
+ac1--uc1
+ac1--uc2
+uc2 ..> uc3:<extends>
+
+@enduml
