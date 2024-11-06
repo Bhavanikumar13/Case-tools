@@ -1,0 +1,50 @@
+@startuml
+class "product details" {
+ pcode:int
+ pname:string
+ openingstock:int
+ price:int
+ __
+ add()
+ Delete()
+ update()
+ clear()
+ exit()
+}
+class "purchase details"
+{
+pdate:data
+pcode:int
+Sname:string
+pqty:int
+price:int
+__
+purchase save()
+purchase delete()
+exit()
+}
+class "sales details"
+{
+Sname:date
+Cname:string
+pcode:int
+price:int
+Qty:int
+__
+Addsales()
+exit()
+}
+
+class "stock details"
+{
+Date:date
+Date2:date
+__
+Viewstock()
+Cancel()
+}
+"purchase details"-left->"product details"
+"purchase details"<-right-"sales details"
+"purchase details"<-down-"stock details"
+"stock details"-up-^"sales details"
+@enduml
