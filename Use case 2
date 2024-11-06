@@ -1,0 +1,20 @@
+@startuml
+start
+:make over;
+->check for old client;
+split
+:verify product no.description and stock on hold;
+split again
+:create new record;
+end split
+:information stock person for packing;
+:query location;
+:order to sphipping delivery;
+split
+:inform accountant to prepare customer invoice;
+split again
+end split
+:inform;
+:pay for service;
+
+@enduml
