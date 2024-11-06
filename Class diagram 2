@@ -1,0 +1,50 @@
+@startuml
+class "Customer"{
+name:String
+id:integer
+address:String
+__
+Place_stock_order()
+Payment()
+Receive()
+}
+class "agent"{
+name:String
+id:string
+__
+Collect_customer_info()
+Check_client_list()
+Update_bill()
+Advicd_customer()
+initiate_packing_order()
+}
+class "Customer_db"{
+name:string
+id:integer
+details:string
+address:string
+__
+Update()
+Delete()
+}
+class "Accountant"{
+name:string
+eid:integer
+__
+Prepare_invoie()
+Upadate()
+}
+class "Stock_person"{
+id:integer
+name:string
+__
+Receive_packing_order()
+Receive_stock()
+Add_info()
+Order_shipping()
+}
+agent "1..*" <-left----- "1..*" Customer
+agent "1..*" -up---> "1" Accountant
+agent "1..*" ---down-> "1" Customer_db
+agent ---right-> "1..*" Stock_person
+@enduml
