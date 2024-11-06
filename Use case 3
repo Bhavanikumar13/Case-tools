@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor "stock manager " as ac1
+rectangle {
+usecase "process customer details" as uc1
+usecase "check customer records" as uc2
+usecase "process product details" as uc3
+usecase "check expiry details" as uc4
+}
+usecase "identify regular customers" as uc5
+usecase "hag expired products" as uc6
+ac1--uc1
+ac1--uc2
+ac1--uc3
+ac1--uc4
+uc2 ..> uc5:<extends>
+uc4 ..> uc6:<extends>
+@enduml
