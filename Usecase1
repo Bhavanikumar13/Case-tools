@@ -1,0 +1,8 @@
+@startuml
+:Stock Management System: -left-> (Stock Management)
+:Stock Management System: -right-> (Product Management)
+:Stock Management System: -up-> (Bill Management)
+:Stock Management System: -down-> (Customer Management)
+:Stock Management System: -up-> (Product Quality Management)
+:Stock Management System: -down-> (Store Management)
+@enduml
